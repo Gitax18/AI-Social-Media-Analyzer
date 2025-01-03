@@ -59,3 +59,7 @@ This project demonstrates a Retrieval Augmented Generation (RAG) pipeline using 
 Below is the output of this question in html file: **_"give me some interesting insights related to the social media engagements, How advice me how can I upload post at what time to get most engagement"_**
 
 ![output screen](result.png)
+
+**The langflow diagram:**
+
+![langflow diagram](langflow-diagram.png)
