@@ -1,4 +1,4 @@
-// Note: Replace **<YOUR_APPLICATION_TOKEN>** with your actual Application token
+require("dotenv").config();
 
 class LangflowClient {
   constructor(baseURL, applicationToken) {
@@ -121,7 +121,7 @@ async function main(
 ) {
   const flowIdOrName = "3befb806-b6f3-4e74-8430-f618ef654cc4";
   const langflowId = "4b2adee2-0c34-4f29-8b9a-ff1d573c8a03";
-  const applicationToken = "<YOUR_APPLICATION_TOKEN>";
+  const applicationToken = process.env.token;
   const langflowClient = new LangflowClient(
     "https://api.langflow.astra.datastax.com",
     applicationToken
