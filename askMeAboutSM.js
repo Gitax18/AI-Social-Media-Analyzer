@@ -1,4 +1,5 @@
 require("dotenv").config();
+const fs = require("fs");
 
 class LangflowClient {
   constructor(baseURL, applicationToken) {
@@ -93,7 +94,6 @@ class LangflowClient {
         stream,
         tweaks
       );
-      console.log("Init Response:", initResponse);
       if (
         stream &&
         initResponse &&
@@ -102,7 +102,6 @@ class LangflowClient {
       ) {
         const streamUrl =
           initResponse.outputs[0].outputs[0].artifacts.stream_url;
-        console.log(`Streaming from: ${streamUrl}`);
         this.handleStream(streamUrl, onUpdate, onClose, onError);
       }
       return initResponse;
@@ -141,7 +140,7 @@ async function main(
       "AstraDB-lXeCy": {},
       "HuggingFaceInferenceAPIEmbeddings-MQaOg": {},
     };
-    response = await langflowClient.runFlow(
+    const response = await langflowClient.runFlow(
       flowIdOrName,
       langflowId,
       inputValue,
@@ -149,19 +148,20 @@ async function main(
       outputType,
       tweaks,
       stream,
-      (data) => console.log("Received:", data.chunk), // onUpdate
-      (message) => console.log("Stream Closed:", message), // onClose
-      (error) => console.log("Stream Error:", error) // onError
+      (data) => fs.appendFileSync("output.html", `Received: ${data.chunk}\n`), // onUpdate
+      (message) =>
+        fs.appendFileSync("output.html", `Stream Closed: ${message}\n`), // onClose
+      (error) => fs.appendFileSync("output.html", `Stream Error: ${error}\n`) // onError
     );
     if (!stream && response && response.outputs) {
       const flowOutputs = response.outputs[0];
       const firstComponentOutputs = flowOutputs.outputs[0];
       const output = firstComponentOutputs.outputs.message;
 
-      console.log("Final Output:", output.message.text);
+      fs.writeFileSync("output.html", `Final Output: ${output.message.text}\n`);
     }
   } catch (error) {
-    console.error("Main Error", error.message);
+    fs.writeFileSync("output.html", `Main Error: ${error.message}\n`);
   }
 }
 

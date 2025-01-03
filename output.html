@@ -1,0 +1,145 @@
+Final Output: ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post Engagements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section h2 {
+            margin-top: 0;
+        }
+        
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .section ul li span {
+            font-weight: bold;
+        }
+        
+        .section ul li strong {
+            font-size: 1.2em;
+        }
+        
+        .schedule {
+            margin-top: 20px;
+        }
+        
+        .schedule table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .schedule th, .schedule td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .schedule th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Insights</h2>
+            <ul>
+                <li><span>Peak Engagement Hours:</span> The data suggests that the peak engagement hours are between 12 pm and 3 pm, with a slight dip in engagement between 4 pm and 6 pm.</li>
+                <li><span>Post Type:</span> Carousel posts tend to perform better than static and reel posts, with an average engagement rate of 0.25 compared to 0.15 for static posts and 0.10 for reel posts.</li>
+                <li><span>Day of the Week:</span> Posts uploaded on Tuesdays, Wednesdays, and Thursdays tend to perform better than those uploaded on other days, with an average engagement rate of 0.20 compared to 0.15 for Mondays and Fridays.</li>
+                <li><span>Time of the Month:</span> Posts uploaded during the first half of the month tend to perform better than those uploaded during the second half, with an average engagement rate of 0.20 compared to 0.15.</li>
+                <li><span>Engagement Rate:</span> The top 5 posts with the highest engagement rates are:
+                    <ul>
+                        <li>post25 (0.5286)</li>
+                        <li>post20 (0.8551)</li>
+                        <li>post42 (0.4834)</li>
+                        <li>post9 (0.3675)</li>
+                        <li>post10 (0.4044)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Recommendations</h2>
+            <ul>
+                <li><span>Upload Posts during Peak Hours:</span> Try to upload your posts between 12 pm and 3 pm to maximize engagement.</li>
+                <li><span>Use Carousel Posts:</span> Consider using carousel posts to increase engagement, as they tend to perform better than static and reel posts.</li>
+                <li><span>Post on Tuesdays, Wednesdays, and Thursdays:</span> Schedule your posts to go live on these days to take advantage of the higher engagement rates.</li>
+                <li><span>Post during the First Half of the Month:</span> Try to upload your posts during the first half of the month to increase engagement.</li>
+                <li><span>Experiment with Different Post Types:</span> While carousel posts tend to perform better, it's essential to experiment with different post types to find what works best for your audience.</li>
+            </ul>
+        </div>
+        <div class="schedule">
+            <h2>Upload Post Schedule:</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>10 am, 2 pm, 6 pm</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>12 pm, 3 pm, 7 pm</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>1 pm, 4 pm, 8 pm</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>12 pm, 3 pm, 7 pm</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>10 am, 2 pm, 6 pm</td>
+                </tr>
+                <tr>
+                    <td>Saturday and Sunday</td>
+                    <td>12 pm, 3 pm, 7 pm</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        // Add event listener to the table rows to make them clickable
+        var tableRows = document.querySelectorAll('table tr');
+        tableRows.forEach(function(row) {
+            row.addEventListener('click', function() {
+                // Add a class to the row to highlight it
+                row.classList.toggle('highlight');
+            });
+        });
+    </script>
+</body>
+</html>
+```
