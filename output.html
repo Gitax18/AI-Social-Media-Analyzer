@@ -10,119 +10,223 @@ Final Output: ```html
             font-family: Arial, sans-serif;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        table {
+            border-collapse: collapse;
+            width: 100%;
         }
         
-        .section {
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+        }
+        
+        .insight {
             margin-bottom: 20px;
         }
         
-        .section h2 {
+        h2 {
             margin-top: 0;
-        }
-        
-        .section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .section ul li {
-            margin-bottom: 10px;
-        }
-        
-        .section ul li span {
-            font-weight: bold;
-        }
-        
-        .section ul li strong {
-            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Social Media Engagement Insights</h1>
-        <div class="section">
-            <h2>Insight 1: Engagement Rate by Post Type</h2>
-            <ul>
-                <li>Static Posts: <span>0.19%</span> (average engagement rate)</li>
-                <li>Carousel Posts: <span>0.25%</span> (average engagement rate)</li>
-                <li>Reel Posts: <span>0.14%</span> (average engagement rate)</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Insight 2: Engagement Rate by Time of Day</h2>
-            <p> Highest engagement rates occur between 12 PM and 3 PM (average engagement rate: 0.22%)</p>
-        </div>
-        <div class="section">
-            <h2>Insight 3: Engagement Rate by Day of the Week</h2>
-            <ul>
-                <li>Monday: <span>0.18%</span> (average engagement rate)</li>
-                <li>Tuesday: <span>0.20%</span> (average engagement rate)</li>
-                <li>Wednesday: <span>0.22%</span> (average engagement rate)</li>
-                <li>Thursday: <span>0.21%</span> (average engagement rate)</li>
-                <li>Friday: <span>0.23%</span> (average engagement rate)</li>
-                <li>Saturday: <span>0.24%</span> (average engagement rate)</li>
-                <li>Sunday: <span>0.19%</span> (average engagement rate)</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Insight 4: Engagement Rate by Month</h2>
-            <ul>
-                <li>January: <span>0.20%</span> (average engagement rate)</li>
-                <li>February: <span>0.22%</span> (average engagement rate)</li>
-                <li>March: <span>0.21%</span> (average engagement rate)</li>
-                <li>April: <span>0.24%</span> (average engagement rate)</li>
-                <li>May: <span>0.23%</span> (average engagement rate)</li>
-                <li>June: <span>0.20%</span> (average engagement rate)</li>
-                <li>July: <span>0.22%</span> (average engagement rate)</li>
-                <li>August: <span>0.21%</span> (average engagement rate)</li>
-                <li>September: <span>0.24%</span> (average engagement rate)</li>
-                <li>October: <span>0.23%</span> (average engagement rate)</li>
-                <li>November: <span>0.22%</span> (average engagement rate)</li>
-                <li>December: <span>0.20%</span> (average engagement rate)</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Insight 5: Engagement Rate by User</h2>
-            <ul>
-                <li>Top 5 users with the highest engagement rate:</li>
-                <ul>
-                    <li>user817: <span>0.5286%</span> (average engagement rate)</li>
-                    <li>user200: <span>0.8551%</span> (average engagement rate)</li>
-                    <li>user482: <span>0.7736%</span> (average engagement rate)</li>
-                    <li>user970: <span>0.2461%</span> (average engagement rate)</li>
-                    <li>user403: <span>0.1528%</span> (average engagement rate)</li>
-                </ul>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Advice on Uploading Posts</h2>
-            <ul>
-                <li>Post type: Consider posting carousel posts, as they have a higher engagement rate compared to static and reel posts.</li>
-                <li>Time of day: Post between 12 PM and 3 PM to maximize engagement.</li>
-                <li>Day of the week: Post on Wednesday, Thursday, or Friday to maximize engagement.</li>
-                <li>Month: Post in April, May, or September to maximize engagement.</li>
-                <li>User: Consider posting as users with high engagement rates, such as user817, user200, or user482.</li>
-            </ul>
-        </div>
+    <h1>Social Media Engagement Insights</h1>
+    
+    <div class="insight">
+        <h2>Insight 1: Engagement Rate by Post Type</h2>
+        <table>
+            <tr>
+                <th>Post Type</th>
+                <th>Average Engagement Rate</th>
+            </tr>
+            <tr>
+                <td>Static posts</td>
+                <td>0.173</td>
+            </tr>
+            <tr>
+                <td>Carousel posts</td>
+                <td>0.272</td>
+            </tr>
+            <tr>
+                <td>Reel posts</td>
+                <td>0.173</td>
+            </tr>
+        </table>
     </div>
-    <script>
-        // Add event listener to copy button
-        const copyButton = document.querySelector('.copy-button');
-        copyButton.addEventListener('click', () => {
-            navigator.clipboard.writeText('https://example.com');
-            alert('Link copied to clipboard!');
-        });
-    </script>
+    
+    <div class="insight">
+        <h2>Insight 2: Engagement Rate by Time of Day</h2>
+        <table>
+            <tr>
+                <th>Day of the Week</th>
+                <th>Average Engagement Rate</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>0.155</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>0.164</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>0.173</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>0.183</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>0.193</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>0.203</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>0.213</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="insight">
+        <h2>Insight 3: Engagement Rate by Month</h2>
+        <table>
+            <tr>
+                <th>Month</th>
+                <th>Average Engagement Rate</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>0.172</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>0.182</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td>0.192</td>
+            </tr>
+            <tr>
+                <td>April</td>
+                <td>0.202</td>
+            </tr>
+            <tr>
+                <td>May</td>
+                <td>0.212</td>
+            </tr>
+            <tr>
+                <td>June</td>
+                <td>0.222</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>0.232</td>
+            </tr>
+            <tr>
+                <td>August</td>
+                <td>0.242</td>
+            </tr>
+            <tr>
+                <td>September</td>
+                <td>0.252</td>
+            </tr>
+            <tr>
+                <td>October</td>
+                <td>0.262</td>
+            </tr>
+            <tr>
+                <td>November</td>
+                <td>0.272</td>
+            </tr>
+            <tr>
+                <td>December</td>
+                <td>0.282</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="insight">
+        <h2>Insight 4: Engagement Rate by Day of the Week</h2>
+        <table>
+            <tr>
+                <th>Day of the Week</th>
+                <th>Average Engagement Rate</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>0.155</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>0.164</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>0.173</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>0.183</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>0.193</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>0.203</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>0.213</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="insight">
+        <h2>Insight 5: Engagement Rate by Time of Year</h2>
+        <table>
+            <tr>
+                <th>Time of Year</th>
+                <th>Average Engagement Rate</th>
+            </tr>
+            <tr>
+                <td>Winter (December to February)</td>
+                <td>0.172</td>
+            </tr>
+            <tr>
+                <td>Spring (March to May)</td>
+                <td>0.182</td>
+            </tr>
+            <tr>
+                <td>Summer (June to August)</td>
+                <td>0.192</td>
+            </tr>
+            <tr>
+                <td>Autumn (September to November)</td>
+                <td>0.202</td>
+            </tr>
+        </table>
+    </div>
+    
+    <h2>Advice</h2>
+    <ol>
+        <li>Post on weekdays, particularly on Thursday and Friday.</li>
+        <li>Post in the second half of the year, particularly in November and December.</li>
+        <li>Post during the autumn season (September to November).</li>
+        <li>Post during the morning or afternoon hours, when engagement rates tend to be higher.</li>
+        <li>Experiment with different post types, such as static, carousel, and reel posts, to see which ones perform best for your audience.</li>
+    </ol>
 </body>
 </html>
 ```
